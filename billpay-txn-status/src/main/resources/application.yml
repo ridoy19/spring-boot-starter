@@ -5,9 +5,9 @@ spring:
   application:
     name: BILL-PAY-STATUS
   datasource:
-    url: jdbc:oracle:thin:@//10.230.1.211:1521/nagadprim
-    username: TECH_PM_NAZIM_STG_TW190182
-    password: NoBody
+    url: jdbc:oracle:thin:@//localhost:1521/test
+    username: username
+    password: password
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     generate-ddl: true

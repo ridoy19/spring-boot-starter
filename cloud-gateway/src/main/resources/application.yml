@@ -7,22 +7,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: CUSTOMER-WALLET-VALIDATION-PMEAT
-          uri: lb://CUSTOMER-WALLET-VALIDATION-PMEAT
+        - id: BILL-PAY-TXN-STATUS
+          uri: lb://BILL-PAY-TXN-STATUS
           predicates:
-            - Path=/api/v2/**
-        - id: IBAS-SERVICE
-          uri: lb://IBAS-SERVICE
-          predicates:
-            - Path=/ibas/**
-        - id: NAGAD-WALLET-VALIDATION
-          uri: lb://NAGAD-WALLET-VALIDATION
-          predicates:
-            - Path=/nagad-wallet-validation/api/**
-        - id: DOWA-NAGAD-WALLET-VALIDATION
-          uri: lb://DOWA-NAGAD-WALLET-VALIDATION
-          predicates:
-            - Path=/dowa/wallet-validation/api/**
+            - Path=/api/v1/**
 eureka:
   client:
     registerWithEureka: true
