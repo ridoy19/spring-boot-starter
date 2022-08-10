@@ -1,0 +1,31 @@
+server:
+  port: 9192
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: CUSTOMER-WALLET-VALIDATION-PMEAT
+          uri: lb://CUSTOMER-WALLET-VALIDATION-PMEAT
+          predicates:
+            - Path=/api/v2/**
+        - id: IBAS-SERVICE
+          uri: lb://IBAS-SERVICE
+          predicates:
+            - Path=/ibas/**
+        - id: NAGAD-WALLET-VALIDATION
+          uri: lb://NAGAD-WALLET-VALIDATION
+          predicates:
+            - Path=/nagad-wallet-validation/api/**
+        - id: DOWA-NAGAD-WALLET-VALIDATION
+          uri: lb://DOWA-NAGAD-WALLET-VALIDATION
+          predicates:
+            - Path=/dowa/wallet-validation/api/**
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8162/eureka/
