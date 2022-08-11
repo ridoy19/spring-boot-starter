@@ -1,13 +1,14 @@
 server:
-  port: 8082
+  port: 8151
 
+apiUrl: /api/v1/bill-pay-status
 spring:
   application:
     name: BILL-PAY-STATUS
   datasource:
-    url: jdbc:oracle:thin:@//localhost:1521/test
-    username: username
-    password: password
+    url: jdbc:oracle:thin:@//10.230.1.211:1521/nagadprim
+    username: TECH_PM_NAZIM_STG_TW190182
+    password: NoBody
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     generate-ddl: true
@@ -18,12 +19,12 @@ spring:
       hibernate:
         format_sql: true
     database-platform: org.hibernate.dialect.Oracle12cDialect
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8162/eureka/
+#eureka:
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:8162/eureka/
 
 management:
   endpoints:
@@ -36,3 +37,5 @@ management:
       enabled: true
     health:
       show-details: always
+
+
