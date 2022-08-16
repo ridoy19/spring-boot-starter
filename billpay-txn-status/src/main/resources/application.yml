@@ -1,7 +1,8 @@
 server:
   port: 8151
 
-apiUrl: /api/v1/bill-pay-status
+application:
+  api-url: /api/v1/bill-pay-status
 spring:
   application:
     name: BILL-PAY-STATUS
@@ -37,5 +38,3 @@ management:
       enabled: true
     health:
       show-details: always
-
-

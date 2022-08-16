@@ -1,10 +1,10 @@
-package com.nagad.billpaytxnstatus;
+package com.mynagad.apiexternal.billpaytxnstatus;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BillPayTxnStatusApplicationTests {
+class BillpayTxnStatusApplicationTests {
 
 	@Test
 	void contextLoads() {
